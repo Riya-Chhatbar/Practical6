@@ -1,0 +1,62 @@
+﻿@model program6.Models.product
+
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h3>@Model.Name</h3>
+    </div>
+
+    <div class="panel-body">
+
+        <p>
+            <strong>Id:</strong>
+            @Model.Id
+        </p>
+
+        <p>
+            <strong>Name:</strong>
+            @Model.Name
+        </p>
+
+        <p>
+            <strong>Category:</strong>
+            @Model.Category
+        </p>
+
+        <p>
+            <strong>Price:</strong>
+            ₹ @Model.Price
+        </p>
+
+        <p>
+            <strong>Description:</strong>
+            @Model.Description
+        </p>
+
+        <p>
+            <strong>Image:</strong>
+            <br />
+
+            <img src="@Model.ImageUrl"
+                 width="200"
+                 height="200"
+                 alt="@Model.Name" />
+        </p>
+
+    </div>
+
+</div>
+
+<p>
+    
+
+    @Html.ActionLink("Back to List", "Index",
+        null,
+        new { @class = "btn btn-default" })
+</p>
